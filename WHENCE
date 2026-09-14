@@ -5774,6 +5774,9 @@ Version: HuC API/APB ver 10.3.3 for Pantherlake
 File: xe/nvl_guc_70.bin
 Version: GuC API/APB ver 70.72.1 for Novalake S
 
+File: xe/nvl_gsc_1.bin
+Version: GSC API v1.0, release 108.0.0.1211, SVN 1 for Novalake
+
 License: Redistributable. See LICENSE.xe for details
 SPDX-License-Identifier: LicenseRef-LICENSE.xe
 --------------------------------------------------------------------------
