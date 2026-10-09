@@ -7776,7 +7776,7 @@ SPDX-License-Identifier: LicenseRef-LICENSE.Lontium
 Driver: wfx - Silicon Labs Wi-Fi Transceiver
 
 File: wfx/wfm_wf200_C0.sec
-Version: 3.17
+Version: 3.18
 
 File: wfx/brd4001a.pds
 File: wfx/brd8022a.pds
