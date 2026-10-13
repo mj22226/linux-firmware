@@ -3576,6 +3576,7 @@ File: rtw89/rtw8922d_fw.bin
 File: rtw89/rtw8922d_fw-1.bin
 File: rtw89/rtw8922ds_fw.bin
 File: rtw89/rtw8922ds_fw-1.bin
+File: rtw89/board_elm.bin
 
 Licence: Redistributable. See LICENCE.rtlwifi_firmware.txt for details.
 SPDX-License-Identifier: LicenseRef-LICENCE.rtlwifi_firmware.txt
