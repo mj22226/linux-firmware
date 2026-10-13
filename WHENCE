@@ -4909,7 +4909,7 @@ File: nvidia/tegra186/xusb.bin
 Version: v55.15
 
 File: nvidia/tegra194/xusb.bin
-Version: v60.06
+Version: l4t-r35.6.5
 
 Licence: Redistributable. See LICENCE.nvidia for details
 SPDX-License-Identifier: LicenseRef-LICENCE.nvidia
@@ -4919,15 +4919,93 @@ SPDX-License-Identifier: LicenseRef-LICENCE.nvidia
 Driver: tegra-vic - NVIDIA Tegra VIC driver
 
 File: nvidia/tegra124/vic03_ucode.bin
+Version: l4t-r21.8.0
 Link: nvidia/tegra124/vic.bin -> vic03_ucode.bin
 
 File: nvidia/tegra210/vic04_ucode.bin
+Version: l4t-r32.7.6
 Link: nvidia/tegra210/vic.bin -> vic04_ucode.bin
 
 File: nvidia/tegra186/vic04_ucode.bin
+Version: l4t-r32.7.6
 Link: nvidia/tegra186/vic.bin -> vic04_ucode.bin
 
 File: nvidia/tegra194/vic.bin
+Version: l4t-r35.6.5
+
+File: nvidia/tegra234/vic.bin
+Version: l4t-r39.2.1
+
+File: nvidia/tegra264/vic.bin
+File: nvidia/tegra264/vic.bin.desc
+Version: l4t-r39.2.1
+
+Licence: Redistributable. See LICENCE.nvidia for details
+SPDX-License-Identifier: LicenseRef-LICENCE.nvidia
+
+--------------------------------------------------------------------------
+
+Driver: tegra-nvenc - NVIDIA Tegra NVENC driver
+
+File: nvidia/tegra124/nvenc.bin
+Version: l4t-r21.8.0
+
+File: nvidia/tegra210/nvenc.bin
+Version: l4t-r32.7.6
+
+File: nvidia/tegra186/nvenc.bin
+Version: l4t-r32.7.6
+
+File: nvidia/tegra194/nvenc.bin
+Version: l4t-r35.6.5
+
+File: nvidia/tegra234/nvenc.bin
+Version: l4t-r39.2.1
+
+Licence: Redistributable. See LICENCE.nvidia for details
+SPDX-License-Identifier: LicenseRef-LICENCE.nvidia
+
+--------------------------------------------------------------------------
+
+Driver: tegra-nvdec - NVIDIA Tegra NVDEC driver
+
+File: nvidia/tegra210/nvdec.bin
+Version: l4t-r32.7.6
+
+File: nvidia/tegra186/nvdec.bin
+Version: l4t-r32.7.6
+
+File: nvidia/tegra194/nvdec.bin
+Version: l4t-r35.6.5
+
+Licence: Redistributable. See LICENCE.nvidia for details
+SPDX-License-Identifier: LicenseRef-LICENCE.nvidia
+
+--------------------------------------------------------------------------
+
+Driver: tegra-nvjpg - NVIDIA Tegra NVJPG driver
+
+File: nvidia/tegra210/nvjpg.bin
+Version: l4t-r32.7.6
+
+File: nvidia/tegra186/nvjpg.bin
+Version: l4t-r32.7.6
+
+File: nvidia/tegra194/nvjpg.bin
+Version: l4t-r35.6.5
+
+File: nvidia/tegra234/nvjpg.bin
+Version: l4t-r39.2.1
+
+Licence: Redistributable. See LICENCE.nvidia for details
+SPDX-License-Identifier: LicenseRef-LICENCE.nvidia
+
+--------------------------------------------------------------------------
+
+Driver: tegra-ofa - NVIDIA Tegra OFA driver
+
+File: nvidia/tegra234/ofa.bin
+Version: l4t-r39.2.1
 
 Licence: Redistributable. See LICENCE.nvidia for details
 SPDX-License-Identifier: LicenseRef-LICENCE.nvidia
