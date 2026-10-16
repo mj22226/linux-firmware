@@ -10471,8 +10471,19 @@ SPDX-License-Identifier: LicenseRef-LICENSE.powervr
 --------------------------------------------------------------------------
 
 Driver: Qualcomm ASoC tplg Firmware
+File: qcom/eliza/eliza-cqs-evk-tplg.bin
 File: qcom/glymur/GLYMUR-CRD-tplg.bin
+File: qcom/glymur/ASUSTeK/UX3407NA/GLYMUR-ASUS-Zenbook-A14-UX3407NA-tplg.bin
+Link: qcom/glymur/GLYMUR-ASUS-Zenbook-A14-UX3407NA-tplg.bin -> ASUSTeK/UX3407NA/GLYMUR-ASUS-Zenbook-A14-UX3407NA-tplg.bin
+File: qcom/glymur/ASUSTeK/UX3607OA/GLYMUR-ASUS-Zenbook-A16-UX3607OA-tplg.bin
+Link: qcom/glymur/GLYMUR-ASUS-Zenbook-A16-UX3607OA-tplg.bin -> ASUSTeK/UX3607OA/GLYMUR-ASUS-Zenbook-A16-UX3607OA-tplg.bin
+File: qcom/glymur/LENOVO/22A8/Lenovo-ThinkPad-T14s-Gen-7-tplg.bin
+Link: qcom/glymur/Lenovo-ThinkPad-T14s-Gen-7-tplg.bin -> LENOVO/22A8/Lenovo-ThinkPad-T14s-Gen-7-tplg.bin
+File: qcom/hawi/HAWI-MTP-tplg.bin
 File: qcom/kaanapali/Kaanapali-MTP-tplg.bin
+File: qcom/maili/MAILI-MTP-tplg.bin
+File: qcom/nord/NORD-RIDE-tplg.bin
+File: qcom/nord/NORD-RRD-tplg.bin
 File: qcom/qcm6490/QCM6490-IDP-tplg.bin
 File: qcom/qcs615/TALOS-EVK-tplg.bin
 File: qcom/qcs6490/radxa/dragon-q6a/QCS6490-Radxa-Dragon-Q6A-tplg.bin
@@ -10487,6 +10498,9 @@ Link: qcom/qcs9100/LEMANS-EVK-tplg.bin -> ../sa8775p/LEMANS-EVK-tplg.bin
 File: qcom/sa8775p/LEMANS-EVK-tplg.bin
 File: qcom/sc8280xp/LENOVO/21BX/audioreach-tplg.bin
 Link: qcom/sc8280xp/SC8280XP-LENOVO-X13S-tplg.bin -> LENOVO/21BX/audioreach-tplg.bin
+File: qcom/sc8280xp/radxa/dragon-q8b/SC8280XP-Radxa-Dragon-Q8B-tplg.bin
+File: qcom/shikra/shikra-cqs-evk-tplg.bin
+File: qcom/shikra/shikra-iqs-evk-tplg.bin
 File: qcom/sm8450/SM8450-HDK-tplg.bin
 File: qcom/sm8550/SM8550-HDK-tplg.bin
 File: qcom/sm8550/SM8550-QRD-tplg.bin
@@ -10500,6 +10514,8 @@ File: qcom/x1e80100/LENOVO/21N1/X1E80100-LENOVO-Thinkpad-T14s-tplg.bin
 Link: qcom/x1e80100/X1E80100-LENOVO-Thinkpad-T14s-tplg.bin -> LENOVO/21N1/X1E80100-LENOVO-Thinkpad-T14s-tplg.bin
 File: qcom/x1e80100/LENOVO/83ED/X1E80100-LENOVO-Yoga-Slim7x-tplg.bin
 Link: qcom/x1e80100/X1E80100-LENOVO-Yoga-Slim7x-tplg.bin -> LENOVO/83ED/X1E80100-LENOVO-Yoga-Slim7x-tplg.bin
+File: qcom/x1e80100/LENOVO/91B6/X1E80100-LENOVO-IdeaCentre-Mini-tplg.bin
+Link: qcom/x1e80100/X1E80100-LENOVO-IdeaCentre-Mini-tplg.bin -> LENOVO/91B6/X1E80100-LENOVO-IdeaCentre-Mini-tplg.bin
 File: qcom/x1e80100/X1E80100-EVK-tplg.bin
 File: qcom/x1e80100/ASUSTeK/vivobook-16/X1E80100-ASUS-Vivobook-16-tplg.bin
 Link: qcom/x1e80100/X1E80100-ASUS-Vivobook-16-tplg.bin -> ASUSTeK/vivobook-16/X1E80100-ASUS-Vivobook-16-tplg.bin
@@ -10508,7 +10524,10 @@ Link: qcom/x1e80100/X1E80100-ASUS-Vivobook-S15-tplg.bin -> ASUSTeK/vivobook-s15/
 File: qcom/x1e80100/ASUSTeK/zenbook-a14/X1E80100-ASUS-Zenbook-A14-tplg.bin
 Link: qcom/x1e80100/X1E80100-ASUS-Zenbook-A14-tplg.bin -> ASUSTeK/zenbook-a14/X1E80100-ASUS-Zenbook-A14-tplg.bin
 File: qcom/x1e80100/X1E001DE-DEVKIT-tplg.bin
+File: qcom/x1e80100/X1E80100-ACER-SWIFT-14-tplg.bin
 File: qcom/x1e80100/X1E80100-CRD-tplg.bin
+File: qcom/x1e80100/X1E80100-MEDION-SPRCHRGD-14-S1-tplg.bin
+File: qcom/x1e80100/X1E80100-Microsoft-Surface-Pro-11-tplg.bin
 File: qcom/x1e80100/X1E80100-Romulus-tplg.bin
 File: qcom/x1e80100/X1E80100-TUXEDO-Elite-14-tplg.bin
 File: qcom/x1e80100/dell/inspiron-14-plus-7441/X1E80100-Dell-Inspiron-14p-7441-tplg.bin
@@ -10521,8 +10540,8 @@ File: qcom/x1e80100/hp/omnibook-x14/X1E80100-HP-OMNIBOOK-X14-tplg.bin
 Link: qcom/x1e80100/X1E80100-HP-OMNIBOOK-X14-tplg.bin -> hp/omnibook-x14/X1E80100-HP-OMNIBOOK-X14-tplg.bin
 File: qcom/x1e80100/X1P42100-Microsoft-Surface-Pro-12in-tplg.bin
 
-Version: v1.0.4
-Info: DATE=05.06.2026
+Version: v1.0.5
+Info: DATE=16.10.2026
 
 Licence: Redistributable. See LICENCE.linaro for details
 SPDX-License-Identifier: BSD-3-Clause
