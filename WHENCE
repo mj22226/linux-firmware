@@ -7353,9 +7353,10 @@ Version: ADSP.HT.5.9.c1-00059-HAMOA-1
 File: qcom/x1e80100/LENOVO/83ED/qcav1e8380.mbn
 Version: CDSP.HT.2.9.c2-00051-HAMOA-1
 File: qcom/x1e80100/LENOVO/83ED/qccdsp8380.mbn
-Version: CDSP.HT.2.9.c2-00051-HAMOA-1
+Version: CDSP.HT.2.9.c1-00075-HAMOA-1
 File: qcom/x1e80100/LENOVO/83ED/qcvss8380.mbn
 Version: video-firmware.3.1-e5aea20c64cb6df9a1c9be99e206053b36424939
+File: qcom/x1e80100/LENOVO/83ED/cdsp_dtbs.elf
 
 Licence: Redistributable. See LICENSE.qcom and NOTICE.qcom for details
 SPDX-License-Identifier: LicenseRef-LICENSE.qcom
