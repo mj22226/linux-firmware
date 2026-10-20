@@ -6639,9 +6639,9 @@ SPDX-License-Identifier: LicenseRef-LICENCE.mediatek
 Driver: mt7925 - MediaTek MT7925 Wireless MACs
 
 File: mediatek/mt7925/WIFI_MT7925_PATCH_MCU_1_1_hdr.bin
-Version: 20260813113015a
+Version: 20261016232915a
 File: mediatek/mt7925/WIFI_RAM_CODE_MT7925_1_1.bin
-Version: 20260813113118
+Version: 20261016233029
 
 Licence: Redistributable. See LICENCE.mediatek for details.
 SPDX-License-Identifier: LicenseRef-LICENCE.mediatek
