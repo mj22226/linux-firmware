@@ -187,7 +187,7 @@ def get_qca_versions(data):
 def get_versions(data, name=""):
     """Return the unique version strings in the image, in order of appearance.
 
-    The format is selected by the firmware file name.
+    The format is selected by the firmware file path.
     """
     if SQE_NAME_RE.search(name):
         return get_sqe_versions(data)
@@ -222,7 +222,8 @@ def get_versions(data, name=""):
 
 def get_fw_versions(fw_path: Path):
     with open_firmware(fw_path) as f:
-        return get_versions(f.read(), fw_path.name)
+        # The qca/ format is selected by the directory, not just the file name
+        return get_versions(f.read(), str(fw_path))
 
 
 def format_versions(versions):
