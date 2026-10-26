@@ -10,9 +10,10 @@ compress=cat
 compext=
 destdir=
 num_jobs=1
+prefix=
 
 usage() {
-    echo "Usage: $0 [-v] [-jN] [--xz|--zstd] <destination directory>"
+    echo "Usage: $0 [-v] [-jN] [-p <path>] [--xz|--zstd] <destination directory>"
 }
 
 err() {
@@ -62,6 +63,16 @@ while test $# -gt 0; do
             shift
             ;;
 
+        -p | --path)
+            # No path in WHENCE begins with a dash, so an option here means
+            # that the path was left out.
+            case "$2" in
+                "" | -*) err "$1 requires a path argument" ;;
+            esac
+            prefix="$2"
+            shift 2
+            ;;
+
         --xz)
             if test "$compext" = ".zst"; then
                 err "cannot mix XZ and ZSTD compression"
@@ -108,6 +119,15 @@ if test -z "$destdir"; then
     err "destination directory was not specified"
 fi
 
+# If -p <path> is specified, then only install paths/files/links that
+# start with <path>.  This allow for a partial installation, e.g.
+# everything only from one vendor.
+prefix="${prefix#/}"
+
+# Escape the regular expression metacharacters in <path> so that the grep call
+# below doesn't get confused.
+prefix_re=$(printf '%s' "$prefix" | sed -e 's/[][\.*+?(){}|^$]/\\&/g')
+
 if test -d "$destdir"; then
     find "$destdir" -type d -empty >/dev/null || warn "destination folder is not empty."
 fi
@@ -117,8 +137,15 @@ if test -e .git/config; then
     ./check_whence.py || err "check_whence.py has detected errors."
 fi
 
+if test -n "$prefix"; then
+    $verbose "installing only files and links starting with $prefix"
+    grep -qE "^(RawFile|File|Link): *\"?$prefix_re" WHENCE ||
+        err "no files or links in WHENCE start with \"$prefix\""
+fi
+
+# The optional quote in the patterns below covers paths that contain spaces
 # shellcheck disable=SC2162 # file/folder name can include escaped symbols
-grep -E '^(RawFile|File):' WHENCE | sed -E -e 's/^(RawFile|File): */\1 /;s/"//g' | while read k f; do
+grep -E "^(RawFile|File): *\"?$prefix_re" WHENCE | sed -E -e 's/^(RawFile|File): */\1 /;s/"//g' | while read k f; do
     install -d "$destdir/$(dirname "$f")"
     $verbose "copying/compressing file $f$compext"
     if test "$compress" != "cat" && test "$k" = "RawFile"; then
@@ -142,7 +169,7 @@ if [ "$num_jobs" -gt 1 ]; then
 fi
 
 # shellcheck disable=SC2162 # file/folder name can include escaped symbols
-grep -E '^Link:' WHENCE | sed -e 's/^Link: *//g;s/-> //g' | while read l t; do
+grep -E "^Link: *\"?$prefix_re" WHENCE | sed -e 's/^Link: *//g;s/-> //g' | while read l t; do
     directory="$destdir/$(dirname "$l")"
     install -d "$directory"
     target="$(cd "$directory" && realpath -m -s "$t")"
@@ -154,6 +181,14 @@ grep -E '^Link:' WHENCE | sed -e 's/^Link: *//g;s/-> //g' | while read l t; do
             ln -s "$t" "$destdir/$l"
         fi
     else
+        # Test for situations where a partial installation results in a
+        # a symlink to a file outside the given <path>.  This could happen,
+        # for example, if <path> specifies a small subset of all the files
+        # from one vendor.
+        if test -n "$prefix" && ! test -e "$target$compext"; then
+            warn "skipping link $l, target $t was not installed"
+            continue
+        fi
         $verbose "creating link $l$compext -> $t$compext"
         if [ "$num_jobs" -gt 1 ]; then
             echo "ln -s \"$t$compext\" \"$destdir/$l$compext\"" >> "$parallel_args_file"
